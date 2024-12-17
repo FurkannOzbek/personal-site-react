@@ -12,8 +12,8 @@ body {
 body {
   color: var(--foreground);
   background: var(--background);
-  font-family: "BlinkMacSystemFont", "Segoe UI", "Roboto", "Helvetica Neue", Arial, "Noto Sans",
-    sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  font-family: "Calibre", "Inter", "San Francisco", "SF Pro Text", "-apple-system", "system-ui",
+    "sans-serif";
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
