@@ -6,20 +6,32 @@ export default function LandingPage() {
       <Box
         component="section"
         sx={{
-          justifyContent: "center",
+          display: "flex",
+          flexDirection: "column",
           minHeight: "100vh",
-          margin: "20% 25% 0 25%",
+          ml: { lg: "20%", md: "15%", sm: "15%" },
+          alignItems: {
+            xs: "center",
+            sm: "normal",
+            md: "normal",
+            lg: "normal",
+          },
+          justifyContent: "center",
         }}
       >
         <Typography
-          sx={{ fontFamily: "SF Mono,Fira Code,Fira Mono,Roboto Mono,monospace", color: "#64ffda" }}
+          sx={{
+            fontFamily: "SF Mono,Fira Code,Fira Mono,Roboto Mono,monospace",
+            color: "#64ffda",
+            fontSize: "15px",
+          }}
         >
           Hi, my name is
         </Typography>
         <Typography
           sx={{
             color: "#ccd6f6",
-            fontSize: "clamp(40px, 8vw, 80px)",
+            fontSize: { lg: "80px", md: "70px", sm: "60px", xs: "50px" },
             fontFamily:
               "Calibre, Inter, San Francisco, SF Pro Text, -apple-system, system-ui, sans-serif",
             fontWeight: "500",
@@ -29,7 +41,14 @@ export default function LandingPage() {
         </Typography>
         <Typography sx={{ color: "#ccd6f6", fontSize: "22px" }}>I love build websites</Typography>
         <Typography
-          sx={{ color: "#8892b0", mt: "2rem", mb: "2rem", fontSize: "15px", width: "75%" }}
+          sx={{
+            color: "#8892b0",
+            mt: { lg: "2rem", xs: "1rem" },
+            mb: "2rem",
+            fontSize: "15px",
+            width: { lg: "35%", md: "60%", sm: "70%", xs: "80%" },
+            textAlign: { lg: "left", md: "left", sm: "left", xs: "center" },
+          }}
         >
           I am a frontend developer with desire to design. Currently I am looking for a job, if you
           would like to contact please hit the button!
@@ -38,6 +57,7 @@ export default function LandingPage() {
         <Button
           variant="outlined"
           sx={{
+            width: { xs: "40%", sm: "30%", md: "15%", lg: "10%" },
             textTransform: "none",
             fontSize: "13px",
             fontFamily: "SF Mono,Fira Code,Fira Mono,Roboto Mono,monospace",
