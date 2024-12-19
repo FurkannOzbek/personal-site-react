@@ -55,7 +55,11 @@ export default function LandingPage() {
           would like to contact please hit the button!
         </Typography>
         {/*Contact Button*/}
-        <CustomButton name={"Contact Me"} width={{ xs: "40%", sm: "30%", md: "15%", lg: "10%" }} />
+        <CustomButton
+          name={"Contact Me"}
+          width={{ xs: "40%", sm: "30%", md: "15%", lg: "10%" }}
+          fontSize={"13px"}
+        />
       </Box>
     </>
   );

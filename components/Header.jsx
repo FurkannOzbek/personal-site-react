@@ -1,7 +1,9 @@
 "use client";
-import { AppBar, Link } from "@mui/material";
+import { AppBar, Link, useTheme, useMediaQuery, IconButton } from "@mui/material";
 import { useState, useEffect, useRef } from "react";
 import CustomButton from "./CustomButton";
+import DrawerMenu from "./DrawerMenu";
+import MenuIcon from "@mui/icons-material/Menu";
 
 export default function Header() {
   const [isVisible, setIsVisible] = useState(true); // For header visibility
@@ -9,6 +11,15 @@ export default function Header() {
   const lastScroll = useRef(0); // For tracking last scroll position
   const headerItems = ["About Me", "Experience", "Skills", "Contact"];
   const headerButtons = ["Resume", "Vurdering", "Soft Skills"];
+
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
+  const [drawerOpen, setDrawerOpen] = useState(false); // State for controlling drawer open/close
+
+  const toggleDrawer = () => {
+    setDrawerOpen((prev) => !prev); // Toggle drawer state
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,7 +45,7 @@ export default function Header() {
     };
   }, []);
 
-  return (
+  return !isMobile ? (
     <AppBar
       sx={{
         flexDirection: "row",
@@ -43,7 +54,7 @@ export default function Header() {
         backdropFilter: shadow ? "blur(5px)" : "none",
         padding: "25px",
         position: "fixed",
-        top: isVisible ? "0" : "-80px", // Hide the header when scrolling down
+        top: isVisible ? "0" : "-100px", // Hide the header when scrolling down
         left: 0,
         right: 0,
         transition:
@@ -51,6 +62,7 @@ export default function Header() {
         boxShadow: shadow ? "0 10px 30px -10px #020c1bb3" : "none", // Apply shadow based on scroll position
       }}
     >
+      {/* Header Items*/}
       {headerItems.map((item, index) => (
         <Link
           href="#"
@@ -75,9 +87,39 @@ export default function Header() {
           {item}
         </Link>
       ))}
+
+      {/* Header Buttons */}
       {headerButtons.map((item, index) => (
-        <CustomButton name={item} marginR={"15px"} key={item} />
+        <CustomButton
+          name={item}
+          marginR={"15px"}
+          key={item}
+          fontSize={{ lg: "13px", md: "13px", sm: "9px", xs: "13px" }}
+        />
       ))}
     </AppBar>
+  ) : (
+    <>
+      {/* Mobile View Hamburger Menu Icon */}
+      <IconButton
+        sx={{
+          position: "absolute",
+          top: 20,
+          right: 20,
+          color: "white",
+        }}
+        onClick={toggleDrawer}
+      >
+        <MenuIcon />
+      </IconButton>
+
+      {/* Drawer Menu */}
+      <DrawerMenu
+        headerButtons={headerButtons}
+        headerItems={headerItems}
+        setDrawerOpen={setDrawerOpen}
+        drawerOpen={drawerOpen}
+      />
+    </>
   );
 }
