@@ -41,7 +41,6 @@ export default function DrawerMenu({ headerItems, headerButtons, setDrawerOpen, 
           <div style={{ marginBottom: "20px", width: "100%" }}>
             {headerItems.map((item, index) => (
               <ListItem
-                button
                 key={item}
                 onClick={toggleDrawer}
                 sx={{

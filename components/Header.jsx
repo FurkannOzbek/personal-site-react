@@ -7,7 +7,7 @@ import MenuIcon from "@mui/icons-material/Menu";
 
 export default function Header() {
   const [isVisible, setIsVisible] = useState(true); // For header visibility
-  const [shadow, setShadow] = useState(false); // For header shadow state for not causing re-renders over and over again
+  const [shadow, setShadow] = useState(false); // For header shadow state
   const lastScroll = useRef(0); // For tracking last scroll position
   const headerItems = ["About Me", "Experience", "Skills", "Contact"];
   const headerButtons = ["Resume", "Vurdering", "Soft Skills"];
@@ -21,7 +21,12 @@ export default function Header() {
     setDrawerOpen((prev) => !prev); // Toggle drawer state
   };
 
+  // Detect when component is mounted
+  const [mounted, setMounted] = useState(false);
+
   useEffect(() => {
+    setMounted(true); // Once mounted, allow the component to render
+
     const handleScroll = () => {
       const currentScroll = window.scrollY;
       if (currentScroll > 0) {
@@ -45,6 +50,9 @@ export default function Header() {
     };
   }, []);
 
+  if (!mounted) return null;
+
+  // If it's mobile, render mobile layout with DrawerMenu
   return !isMobile ? (
     <AppBar
       sx={{
