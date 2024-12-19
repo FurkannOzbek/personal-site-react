@@ -1,6 +1,7 @@
 "use client";
-import { AppBar, Link, Button } from "@mui/material";
+import { AppBar, Link } from "@mui/material";
 import { useState, useEffect, useRef } from "react";
+import CustomButton from "./CustomButton";
 
 export default function Header() {
   const [isVisible, setIsVisible] = useState(true); // For header visibility
@@ -75,25 +76,7 @@ export default function Header() {
         </Link>
       ))}
       {headerButtons.map((item, index) => (
-        <Button
-          href="#"
-          key={item}
-          variant="outlined"
-          sx={{
-            mr: "15px",
-            textTransform: "none",
-            fontSize: "13px",
-            fontFamily: "SF Mono,Fira Code,Fira Mono,Roboto Mono,monospace",
-            color: "white",
-            borderColor: "#64ffda",
-            "&:hover": {
-              backgroundColor: "#64ffda",
-              color: "black",
-            },
-          }}
-        >
-          {item}
-        </Button>
+        <CustomButton name={item} marginR={"15px"} key={item} />
       ))}
     </AppBar>
   );

@@ -1,4 +1,5 @@
-import { Box, Typography, Button } from "@mui/material";
+import { Box, Typography } from "@mui/material";
+import CustomButton from "./CustomButton";
 
 export default function LandingPage() {
   return (
@@ -54,23 +55,7 @@ export default function LandingPage() {
           would like to contact please hit the button!
         </Typography>
         {/*Contact Button*/}
-        <Button
-          variant="outlined"
-          sx={{
-            width: { xs: "40%", sm: "30%", md: "15%", lg: "10%" },
-            textTransform: "none",
-            fontSize: "13px",
-            fontFamily: "SF Mono,Fira Code,Fira Mono,Roboto Mono,monospace",
-            color: "white",
-            borderColor: "#64ffda",
-            "&:hover": {
-              backgroundColor: "#64ffda",
-              color: "black",
-            },
-          }}
-        >
-          Contact Me
-        </Button>
+        <CustomButton name={"Contact Me"} width={{ xs: "40%", sm: "30%", md: "15%", lg: "10%" }} />
       </Box>
     </>
   );
