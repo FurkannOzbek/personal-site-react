@@ -1,11 +1,13 @@
 "use client";
-import { AppBar } from "@mui/material";
+import { AppBar, Link, Button } from "@mui/material";
 import { useState, useEffect, useRef } from "react";
 
 export default function Header() {
   const [isVisible, setIsVisible] = useState(true); // For header visibility
   const [shadow, setShadow] = useState(false); // For header shadow state for not causing re-renders over and over again
   const lastScroll = useRef(0); // For tracking last scroll position
+  const headerItems = ["About Me", "Experience", "Skills", "Contact"];
+  const headerButtons = ["Resume", "Vurdering", "Soft Skills"];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -34,6 +36,8 @@ export default function Header() {
   return (
     <AppBar
       sx={{
+        flexDirection: "row",
+        justifyContent: "flex-end",
         backgroundColor: shadow ? "rgba(var(--background), 0.5)" : "var(--background)",
         backdropFilter: shadow ? "blur(5px)" : "none",
         padding: "25px",
@@ -46,7 +50,51 @@ export default function Header() {
         boxShadow: shadow ? "0 10px 30px -10px #020c1bb3" : "none", // Apply shadow based on scroll position
       }}
     >
-      asd
+      {headerItems.map((item, index) => (
+        <Link
+          href="#"
+          key={item}
+          sx={{
+            display: "flex",
+            alignItems: "center",
+            textDecoration: "none",
+            mr: "30px",
+            color: "white",
+            fontFamily: "SF Mono,Fira Code,Fira Mono,Roboto Mono,monospace",
+            fontSize: "13px",
+          }}
+        >
+          <span
+            style={{
+              color: "#64ffda",
+            }}
+          >
+            {`0${index + 1}.`}
+          </span>
+          {item}
+        </Link>
+      ))}
+      {headerButtons.map((item, index) => (
+        <Button
+          href="#"
+          key={item}
+          variant="outlined"
+          sx={{
+            mr: "15px",
+            textTransform: "none",
+            fontSize: "13px",
+            fontFamily: "SF Mono,Fira Code,Fira Mono,Roboto Mono,monospace",
+            color: "white",
+            borderColor: "#64ffda",
+            "&:hover": {
+              backgroundColor: "#64ffda",
+              color: "black",
+            },
+          }}
+        >
+          {item}
+        </Button>
+      ))}
     </AppBar>
   );
 }
