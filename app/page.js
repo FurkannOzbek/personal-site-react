@@ -2,11 +2,13 @@ import Image from "next/image";
 import styles from "./page.module.css";
 import LandingPage from "@/components/LandingPage";
 import Header from "@/components/Header";
+import SocialLinks from "@/components/SocialLinks";
 export default function Home() {
   return (
     <>
       <Header />
       <LandingPage />
+      <SocialLinks />
       <div>
         Lorem ipsum dolor sit amet, consectetur adipiscing elit. In pretium purus eu lorem cursus,
         vitae convallis augue tincidunt. Donec consequat aliquet fringilla. Quisque fermentum sed
