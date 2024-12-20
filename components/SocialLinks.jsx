@@ -1,20 +1,8 @@
 import { Box, Link } from "@mui/material";
-import GitHubIcon from "@mui/icons-material/GitHub";
-import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import InstagramIcon from "@mui/icons-material/Instagram";
+
+import { socialIconsMap, socialLinks } from "@/constants/socialMedia";
 
 export default function SocialLinks() {
-  const socialIconsMap = {
-    Github: <GitHubIcon />,
-    LinkedIn: <LinkedInIcon />,
-    Instagram: <InstagramIcon />,
-  };
-  const socialLinks = {
-    Github: "https://github.com/FurkannOzbek",
-    LinkedIn: "https://www.linkedin.com/in/fuozbek/",
-    Instagram: "https://www.instagram.com/fu.ozbek/",
-  };
-
   return (
     <Box
       component="div"
