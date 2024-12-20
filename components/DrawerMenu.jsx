@@ -101,11 +101,11 @@ export default function DrawerMenu({ headerItems, headerButtons, setDrawerOpen, 
           >
             {Object.keys(socialIconsMap).map((item) => (
               <Link
+                key={item}
                 sx={{ justifyContent: "center", mt: "20px", color: "white" }}
                 href={socialLinks[item]}
                 target="_blank"
               >
-                {" "}
                 {socialIconsMap[item]}
               </Link>
             ))}

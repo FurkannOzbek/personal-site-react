@@ -11,6 +11,7 @@ export default function SocialLinks() {
         position: "fixed",
         left: "40px",
         width: "40px",
+        display: { lg: "block", md: "block", sm: "block", xs: "none" },
         zIndex: "1000",
         "&::after": {
           content: '""',
