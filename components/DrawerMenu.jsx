@@ -1,7 +1,7 @@
-import { Drawer, List, ListItem, ListItemText, Divider, IconButton } from "@mui/material";
-import { useState } from "react";
+import { Drawer, List, ListItem, ListItemText, Divider, IconButton, Link } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
 import CustomButton from "./CustomButton";
+import { socialLinks, socialIconsMap } from "@/constants/socialMedia";
 
 export default function DrawerMenu({ headerItems, headerButtons, setDrawerOpen, drawerOpen }) {
   const toggleDrawer = () => {
@@ -86,6 +86,28 @@ export default function DrawerMenu({ headerItems, headerButtons, setDrawerOpen, 
                   onClick={toggleDrawer}
                 />
               </div>
+            ))}
+          </div>
+
+          {/*Social Media Section */}
+          <div
+            style={{
+              width: "100%",
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              marginTop: "40px",
+            }}
+          >
+            {Object.keys(socialIconsMap).map((item) => (
+              <Link
+                key={item}
+                sx={{ justifyContent: "center", mt: "20px", color: "white" }}
+                href={socialLinks[item]}
+                target="_blank"
+              >
+                {socialIconsMap[item]}
+              </Link>
             ))}
           </div>
         </List>

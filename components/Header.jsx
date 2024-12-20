@@ -4,13 +4,12 @@ import { useState, useEffect, useRef } from "react";
 import CustomButton from "./CustomButton";
 import DrawerMenu from "./DrawerMenu";
 import MenuIcon from "@mui/icons-material/Menu";
+import { headerItems, headerButtons } from "@/constants/header";
 
 export default function Header() {
   const [isVisible, setIsVisible] = useState(true); // For header visibility
   const [shadow, setShadow] = useState(false); // For header shadow state
   const lastScroll = useRef(0); // For tracking last scroll position
-  const headerItems = ["About Me", "Experience", "Skills", "Contact"];
-  const headerButtons = ["Resume", "Vurdering", "Soft Skills"];
 
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
