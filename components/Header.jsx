@@ -80,8 +80,33 @@ export default function Header() {
             textDecoration: "none",
             mr: "30px",
             color: "white",
-            fontFamily: "SF Mono,Fira Code,Fira Mono,Roboto Mono,monospace",
+            fontFamily: "SF Mono, Fira Code, Fira Mono, Roboto Mono, monospace",
             fontSize: "13px",
+            position: "relative",
+            transition: "color 0.3s ease",
+            "&:hover": {
+              color: "#64ffda",
+            },
+            "&:after": {
+              content: '""',
+              position: "absolute",
+              width: "100%",
+              height: "2px",
+              bottom: "-3px",
+              left: "0",
+              backgroundColor: "#64ffda",
+              transform: "scaleX(0)",
+              transformOrigin: "bottom left",
+              transition: "transform 0.25s ease-out",
+            },
+            "&:hover:after": {
+              transform: "scaleX(1)",
+            },
+            "&:not(:hover):after": {
+              transform: "scaleX(0)",
+              transformOrigin: "bottom right",
+              transition: "transform 0.25s ease-in",
+            },
           }}
         >
           <span
