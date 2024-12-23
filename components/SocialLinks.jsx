@@ -1,5 +1,4 @@
 import { Box, Link } from "@mui/material";
-
 import { socialIconsMap, socialLinks } from "@/constants/socialMedia";
 
 export default function SocialLinks() {
@@ -21,6 +20,8 @@ export default function SocialLinks() {
           margin: "0 auto",
           backgroundColor: "#a8b2d1",
         },
+        opacity: 0, // Initially hidden
+        animation: "fadeIn 3s ease 3s forwards", // 3s delay, 3s duration
       }}
     >
       {Object.keys(socialIconsMap).map((item) => (
