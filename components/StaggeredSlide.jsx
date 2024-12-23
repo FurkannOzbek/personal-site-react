@@ -1,6 +1,7 @@
-import React, { useEffect, useState } from "react";
+"use client";
 import { keyframes } from "@emotion/react";
 import { Box } from "@mui/material";
+import React from "react";
 
 const slideInFromTop = keyframes`
 0% {

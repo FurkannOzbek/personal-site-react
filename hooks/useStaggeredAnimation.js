@@ -1,3 +1,5 @@
+"use client";
+
 import { useState, useEffect } from "react";
 
 export const useStaggeredAnimation = (count, delay = 100, initialDelay = 0) => {

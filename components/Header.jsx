@@ -5,7 +5,7 @@ import CustomButton from "./CustomButton";
 import DrawerMenu from "./DrawerMenu";
 import MenuIcon from "@mui/icons-material/Menu";
 import { headerItems, headerButtons } from "@/constants/header";
-import { StaggeredSlide } from "./StaggeredFade";
+import { StaggeredSlide } from "./StaggeredSlide";
 import { useStaggeredAnimation } from "@/hooks/useStaggeredAnimation";
 
 export default function Header() {
