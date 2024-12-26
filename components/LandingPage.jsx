@@ -3,9 +3,14 @@ import { Box, Typography } from "@mui/material";
 import CustomButton from "./CustomButton";
 import { StaggeredSlide } from "./StaggeredSlide";
 import { useStaggeredAnimation } from "@/hooks/useStaggeredAnimation";
+import { useTheme, useMediaQuery } from "@mui/material";
 
 export default function LandingPage() {
-  const typographyVisibility = useStaggeredAnimation(5, 200, 2500);
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+  const typographyVisibility = isMobile
+    ? useStaggeredAnimation(5, 200, 500)
+    : useStaggeredAnimation(5, 200, 2500);
   return (
     <>
       <Box
