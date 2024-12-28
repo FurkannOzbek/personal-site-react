@@ -19,7 +19,7 @@ export default function LandingPage() {
           display: "flex",
           flexDirection: "column",
           minHeight: "100vh",
-          ml: { lg: "20%", md: "15%", sm: "15%" },
+          ml: { lg: "20%", md: "15%", sm: "0" },
           alignItems: {
             xs: "center",
             sm: "normal",
@@ -54,11 +54,12 @@ export default function LandingPage() {
           <Typography
             sx={{
               color: "#8892b0",
+              justifyContent: "center",
               mt: { lg: "2rem", xs: "1rem" },
               mb: "2rem",
               fontSize: "15px",
               width: { lg: "35%", md: "60%", sm: "70%", xs: "80%" },
-              textAlign: { lg: "left", md: "left", sm: "left", xs: "center" },
+              textAlign: { lg: "left", md: "center", sm: "center", xs: "center" },
             }}
           >
             I am a frontend developer with desire to design. Currently I am looking for a job, if
@@ -67,7 +68,7 @@ export default function LandingPage() {
           {/*Contact Button*/}
           <CustomButton
             name={"Contact Me"}
-            width={{ xs: "40%", sm: "30%", md: "15%", lg: "10%" }}
+            width={{ xs: "100%", sm: "25%", md: "15%", lg: "15%" }}
             fontSize={"13px"}
           />
         </StaggeredSlide>

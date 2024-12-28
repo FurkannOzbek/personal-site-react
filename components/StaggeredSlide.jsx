@@ -23,6 +23,14 @@ export const StaggeredSlide = ({ children, visibleStates }) => {
         key={index}
         sx={{
           display: "flex",
+          alignItems: "center",
+          justifyContent: {
+            xl: "flex-start",
+            lg: "flex-start",
+            md: "flex-start",
+            sm: "center",
+            xs: "center",
+          },
           position: "relative",
           top: "-200px",
           opacity: 0,
