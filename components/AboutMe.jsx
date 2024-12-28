@@ -86,7 +86,7 @@ export default function AboutMe() {
           <Typography
             variant="body1"
             component="p"
-            sx={{ fontWeight: "400", lineHeight: 1.6, fontSize: "15px" }}
+            sx={{ fontWeight: "400", lineHeight: 1.6, fontSize: "15px", color: "#8892b0" }}
           >
             Hello, my name is Furkan, and I have a passion for designing websites. My journey in web
             development began in 2014 when I created a few websites for people close to me. At that
@@ -97,7 +97,13 @@ export default function AboutMe() {
           <Typography
             variant="body1"
             component="p"
-            sx={{ fontWeight: "400", lineHeight: 1.6, mt: "30px", fontSize: "15px" }}
+            sx={{
+              fontWeight: "400",
+              lineHeight: 1.6,
+              mt: "30px",
+              fontSize: "15px",
+              color: "#8892b0",
+            }}
           >
             Eventually, I discovered JavaScript and Vue.js, which inspired me to start coding my
             websites from scratch, allowing for greater creativity and functionality.
@@ -121,7 +127,13 @@ export default function AboutMe() {
           <Typography
             variant="body1"
             component="p"
-            sx={{ fontWeight: "400", lineHeight: 1.6, mt: "30px", fontSize: "15px" }}
+            sx={{
+              fontWeight: "400",
+              lineHeight: 1.6,
+              mt: "30px",
+              fontSize: "15px",
+              color: "#8892b0",
+            }}
           >
             Here are some methods I am familiar with:
           </Typography>

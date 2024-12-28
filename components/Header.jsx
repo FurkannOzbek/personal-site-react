@@ -63,7 +63,7 @@ export default function Header() {
         justifyContent: "flex-end",
         backgroundColor: shadow ? "rgba(var(--background), 0.5)" : "var(--background)",
         backdropFilter: shadow ? "blur(5px)" : "none",
-        padding: "25px",
+        padding: { xl: "25px", lg: "20px", md: "15px" },
         position: "fixed",
         top: isVisible ? "0" : "-100px", // Hide the header when scrolling down
         left: 0,
