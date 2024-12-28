@@ -63,7 +63,7 @@ export default function Header() {
         justifyContent: "flex-end",
         backgroundColor: shadow ? "rgba(var(--background), 0.5)" : "var(--background)",
         backdropFilter: shadow ? "blur(5px)" : "none",
-        padding: "25px",
+        padding: { xl: "25px", lg: "20px", md: "15px" },
         position: "fixed",
         top: isVisible ? "0" : "-100px", // Hide the header when scrolling down
         left: 0,
@@ -86,7 +86,7 @@ export default function Header() {
               mr: "30px",
               color: "white",
               fontFamily: "SF Mono, Fira Code, Fira Mono, Roboto Mono, monospace",
-              fontSize: "13px",
+              fontSize: { xl: "23px", lg: "14px", md: "10px" },
               position: "relative",
               transition: "color 0.3s ease",
               "&:hover": {
@@ -131,7 +131,7 @@ export default function Header() {
             name={item}
             marginR={"15px"}
             key={item}
-            fontSize={{ lg: "13px", md: "13px", sm: "9px", xs: "13px" }}
+            fontSize={{ xl: "23px", lg: "14px", md: "10px", sm: "9px", xs: "13px" }}
           />
         ))}
       </StaggeredSlide>

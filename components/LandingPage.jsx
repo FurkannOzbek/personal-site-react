@@ -19,7 +19,7 @@ export default function LandingPage() {
           display: "flex",
           flexDirection: "column",
           minHeight: "100vh",
-          ml: { lg: "20%", md: "15%", sm: "15%" },
+          ml: { lg: "20%", md: "15%", sm: "0" },
           alignItems: {
             xs: "center",
             sm: "normal",
@@ -34,7 +34,7 @@ export default function LandingPage() {
             sx={{
               fontFamily: "SF Mono,Fira Code,Fira Mono,Roboto Mono,monospace",
               color: "#64ffda",
-              fontSize: "15px",
+              fontSize: { xl: "25px", lg: "15px", md: "12px" },
             }}
           >
             Hi, my name is
@@ -42,7 +42,7 @@ export default function LandingPage() {
           <Typography
             sx={{
               color: "#ccd6f6",
-              fontSize: { lg: "80px", md: "70px", sm: "60px", xs: "50px" },
+              fontSize: { xl: "100px", lg: "60px", md: "50px", sm: "60px", xs: "50px" },
               fontFamily:
                 "Calibre, Inter, San Francisco, SF Pro Text, -apple-system, system-ui, sans-serif",
               fontWeight: "500",
@@ -50,15 +50,23 @@ export default function LandingPage() {
           >
             Furkan Özbek
           </Typography>
-          <Typography sx={{ color: "#ccd6f6", fontSize: "22px" }}>I love build websites</Typography>
+          <Typography
+            sx={{
+              color: "#ccd6f6",
+              fontSize: { xl: "40px", lg: "20px", md: "15px", sm: "20px", xs: "20px" },
+            }}
+          >
+            I love build websites
+          </Typography>
           <Typography
             sx={{
               color: "#8892b0",
+              justifyContent: "center",
               mt: { lg: "2rem", xs: "1rem" },
               mb: "2rem",
-              fontSize: "15px",
+              fontSize: { xl: "22px", lg: "12px", md: "12px", sm: "15px", xs: "12px" },
               width: { lg: "35%", md: "60%", sm: "70%", xs: "80%" },
-              textAlign: { lg: "left", md: "left", sm: "left", xs: "center" },
+              textAlign: { lg: "left", md: "left", sm: "center", xs: "center" },
             }}
           >
             I am a frontend developer with desire to design. Currently I am looking for a job, if
@@ -67,8 +75,8 @@ export default function LandingPage() {
           {/*Contact Button*/}
           <CustomButton
             name={"Contact Me"}
-            width={{ xs: "40%", sm: "30%", md: "15%", lg: "10%" }}
-            fontSize={"13px"}
+            width={{ xs: "100%", sm: "25%", md: "15%", lg: "15%" }}
+            fontSize={{ xl: "25px" }}
           />
         </StaggeredSlide>
       </Box>
