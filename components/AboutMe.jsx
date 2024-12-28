@@ -40,6 +40,7 @@ export default function AboutMe() {
           display: "flex",
           fontWeight: "500",
           alignItems: "center",
+          fontSize: { xl: "35px", md: "25px" },
           mb: "50px",
           "&::before": {
             display: "flex",
@@ -79,14 +80,19 @@ export default function AboutMe() {
         {/* Description Box */}
         <Box
           sx={{
-            flex: 3,
+            flex: 2,
             marginRight: { md: "20px" },
           }}
         >
           <Typography
             variant="body1"
             component="p"
-            sx={{ fontWeight: "400", lineHeight: 1.6, fontSize: "15px", color: "#8892b0" }}
+            sx={{
+              fontWeight: "400",
+              lineHeight: 1.6,
+              fontSize: { xl: "20px", lg: "12px", md: "12px" },
+              color: "#8892b0",
+            }}
           >
             Hello, my name is Furkan, and I have a passion for designing websites. My journey in web
             development began in 2014 when I created a few websites for people close to me. At that
@@ -101,7 +107,7 @@ export default function AboutMe() {
               fontWeight: "400",
               lineHeight: 1.6,
               mt: "30px",
-              fontSize: "15px",
+              fontSize: { xl: "20px", lg: "12px", md: "12px" },
               color: "#8892b0",
             }}
           >
@@ -116,7 +122,7 @@ export default function AboutMe() {
               lineHeight: 1.6,
               mt: "30px",
               color: "#64FED9",
-              fontSize: "15px",
+              fontSize: { xl: "20px", lg: "12px", md: "12px" },
             }}
           >
             Currently, I am about to complete an 8-month web development bootcamp at HackYourFuture,
@@ -131,7 +137,7 @@ export default function AboutMe() {
               fontWeight: "400",
               lineHeight: 1.6,
               mt: "30px",
-              fontSize: "15px",
+              fontSize: { xl: "20px", lg: "12px", md: "12px" },
               color: "#8892b0",
             }}
           >
@@ -143,13 +149,18 @@ export default function AboutMe() {
             {skills.map((skill, index) => (
               <Grid item xs={12} sm={6} md={4} key={index}>
                 <List>
-                  <ListItem>
+                  <ListItem sx={{ padding: "0px" }}>
                     <ListItemIcon sx={{ minWidth: "20px" }}>
                       <CircleIcon sx={{ fontSize: 8, color: "#64ffda" }} />
                     </ListItemIcon>
                     <ListItemText
                       primary={
-                        <Typography sx={{ fontSize: "14px", color: "rgba(235, 235, 235, .64)" }}>
+                        <Typography
+                          sx={{
+                            fontSize: { xl: "20px", lg: "12px", md: "12px" },
+                            color: "rgba(235, 235, 235, .64)",
+                          }}
+                        >
                           {skill}
                         </Typography>
                       }
