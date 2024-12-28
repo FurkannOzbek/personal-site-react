@@ -21,7 +21,7 @@ export default function AboutMe() {
       component="section"
       sx={{
         display: "flex",
-        ml: { lg: "20%", sm: "5%", xs: "1%" },
+        ml: { lg: "20%", md: "15%", sm: "5%", xs: "1%" },
         mr: { lg: "20%", sm: "5%", xs: "1%" },
         flexDirection: "column",
         alignItems: "flex-start",
@@ -148,12 +148,14 @@ export default function AboutMe() {
             ))}
           </Grid>
         </Box>
+        {/* Image section */}
         {!isMobile && (
           <Box
             sx={{
               flex: 1,
               height: "100%",
               minHeight: "300px",
+              minWidth: "150px",
               backgroundImage: "url('/pp.png')",
               backgroundSize: "cover",
               backgroundPosition: "center",
