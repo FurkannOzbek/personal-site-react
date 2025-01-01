@@ -34,7 +34,7 @@ export default function LandingPage() {
             sx={{
               fontFamily: "SF Mono,Fira Code,Fira Mono,Roboto Mono,monospace",
               color: "#64ffda",
-              fontSize: { xl: "25px", lg: "15px", md: "12px" },
+              fontSize: { xl: "16px", lg: "15px", md: "12px" },
             }}
           >
             Hi, my name is
@@ -42,7 +42,7 @@ export default function LandingPage() {
           <Typography
             sx={{
               color: "#ccd6f6",
-              fontSize: { xl: "100px", lg: "60px", md: "50px", sm: "60px", xs: "50px" },
+              fontSize: { xl: "60px", lg: "60px", md: "50px", sm: "60px", xs: "50px" },
               fontFamily:
                 "Calibre, Inter, San Francisco, SF Pro Text, -apple-system, system-ui, sans-serif",
               fontWeight: "500",
@@ -53,7 +53,7 @@ export default function LandingPage() {
           <Typography
             sx={{
               color: "#ccd6f6",
-              fontSize: { xl: "40px", lg: "20px", md: "15px", sm: "20px", xs: "20px" },
+              fontSize: { xl: "25px", lg: "20px", md: "15px", sm: "20px", xs: "20px" },
             }}
           >
             I love build websites
@@ -64,7 +64,7 @@ export default function LandingPage() {
               justifyContent: "center",
               mt: { lg: "2rem", xs: "1rem" },
               mb: "2rem",
-              fontSize: { xl: "22px", lg: "12px", md: "12px", sm: "15px", xs: "12px" },
+              fontSize: { xl: "15px", lg: "12px", md: "12px", sm: "15px", xs: "12px" },
               width: { lg: "35%", md: "60%", sm: "70%", xs: "80%" },
               textAlign: { lg: "left", md: "left", sm: "center", xs: "center" },
             }}
@@ -76,7 +76,7 @@ export default function LandingPage() {
           <CustomButton
             name={"Contact Me"}
             width={{ xs: "100%", sm: "25%", md: "15%", lg: "15%" }}
-            fontSize={{ xl: "25px" }}
+            fontSize={{ xl: "15px" }}
           />
         </StaggeredSlide>
       </Box>

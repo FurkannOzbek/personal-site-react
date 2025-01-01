@@ -21,8 +21,8 @@ export default function AboutMe() {
       component="section"
       sx={{
         display: "flex",
-        ml: { lg: "20%", md: "15%", sm: "5%", xs: "1%" },
-        mr: { lg: "20%", sm: "5%", xs: "1%" },
+        ml: { lg: "25%", md: "15%", sm: "5%", xs: "1%" },
+        mr: { lg: "25%", md: "15%", sm: "5%", xs: "1%" },
         flexDirection: "column",
         alignItems: "flex-start",
         justifyContent: "center",
@@ -90,7 +90,7 @@ export default function AboutMe() {
             sx={{
               fontWeight: "400",
               lineHeight: 1.6,
-              fontSize: { xl: "20px", lg: "12px", md: "12px" },
+              fontSize: { xl: "15px", lg: "12px", md: "12px" },
               color: "#8892b0",
             }}
           >
@@ -107,7 +107,7 @@ export default function AboutMe() {
               fontWeight: "400",
               lineHeight: 1.6,
               mt: "30px",
-              fontSize: { xl: "20px", lg: "12px", md: "12px" },
+              fontSize: { xl: "15px", lg: "12px", md: "12px" },
               color: "#8892b0",
             }}
           >
@@ -122,7 +122,7 @@ export default function AboutMe() {
               lineHeight: 1.6,
               mt: "30px",
               color: "#64FED9",
-              fontSize: { xl: "20px", lg: "12px", md: "12px" },
+              fontSize: { xl: "15px", lg: "12px", md: "12px" },
             }}
           >
             Currently, I am about to complete an 8-month web development bootcamp at HackYourFuture,
@@ -137,7 +137,7 @@ export default function AboutMe() {
               fontWeight: "400",
               lineHeight: 1.6,
               mt: "30px",
-              fontSize: { xl: "20px", lg: "12px", md: "12px" },
+              fontSize: { xl: "15px", lg: "12px", md: "12px" },
               color: "#8892b0",
             }}
           >
@@ -157,7 +157,7 @@ export default function AboutMe() {
                       primary={
                         <Typography
                           sx={{
-                            fontSize: { xl: "20px", lg: "12px", md: "12px" },
+                            fontSize: { xl: "15px", lg: "12px", md: "12px" },
                             color: "rgba(235, 235, 235, .64)",
                           }}
                         >

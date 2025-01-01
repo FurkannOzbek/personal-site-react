@@ -83,10 +83,11 @@ export default function Header() {
               display: "flex",
               alignItems: "center",
               textDecoration: "none",
+              padding: "10px 0 10px 0",
               mr: "30px",
               color: "white",
               fontFamily: "SF Mono, Fira Code, Fira Mono, Roboto Mono, monospace",
-              fontSize: { xl: "23px", lg: "14px", md: "10px" },
+              fontSize: { xl: "13px", lg: "11px", md: "10px" },
               position: "relative",
               transition: "color 0.3s ease",
               "&:hover": {
@@ -131,7 +132,7 @@ export default function Header() {
             name={item}
             marginR={"15px"}
             key={item}
-            fontSize={{ xl: "23px", lg: "14px", md: "10px", sm: "9px", xs: "13px" }}
+            fontSize={{ xl: "13px", lg: "11px", md: "10px", sm: "9px", xs: "13px" }}
           />
         ))}
       </StaggeredSlide>
