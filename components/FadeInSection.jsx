@@ -14,8 +14,6 @@ const FadeInSection = ({ children }) => {
         transition: "opacity 0.8s ease-out, transform 0.8s ease-out",
         margin: "50px",
         padding: "20px",
-        borderRadius: "8px",
-        boxShadow: "0 4px 6px rgba(0, 0, 0, 0.1)",
       }}
     >
       {children}

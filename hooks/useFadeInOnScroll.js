@@ -1,6 +1,6 @@
 import { useEffect, useRef } from "react";
 
-const useFadeInOnScroll = (threshold = 0.2) => {
+const useFadeInOnScroll = (threshold = 0.7) => {
   const elementRef = useRef(null);
 
   useEffect(() => {
