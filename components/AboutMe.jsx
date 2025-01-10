@@ -12,15 +12,14 @@ import {
 } from "@mui/material";
 import CircleIcon from "@mui/icons-material/Circle"; // Bullet point icon
 import { skills } from "@/constants/skills";
-import { StaggeredSlide } from "./StaggeredSlide";
-import { useStaggeredAnimation } from "@/hooks/useStaggeredAnimation";
+import FadeInSection from "./FadeInSection";
 
 export default function AboutMe() {
   const theme = useTheme();
   const isMobile = useMediaQuery(theme.breakpoints.down("md"));
-  const typographyVisibility = useStaggeredAnimation(5, 200, 2500);
+
   return (
-    <StaggeredSlide visibleStates={typographyVisibility} timeout={700}>
+    <FadeInSection>
       <Box
         component="section"
         sx={{
@@ -192,6 +191,6 @@ export default function AboutMe() {
           )}
         </Box>
       </Box>
-    </StaggeredSlide>
+    </FadeInSection>
   );
 }
