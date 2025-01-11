@@ -4,6 +4,7 @@ import LandingPage from "@/components/LandingPage";
 import Header from "@/components/Header";
 import SocialLinks from "@/components/SocialLinks";
 import AboutMe from "@/components/AboutMe";
+import WorkExperience from "@/components/WorkExperience";
 export default function Home() {
   return (
     <>
@@ -11,6 +12,7 @@ export default function Home() {
       <LandingPage />
       <SocialLinks />
       <AboutMe />
+      <WorkExperience />
     </>
   );
 }
