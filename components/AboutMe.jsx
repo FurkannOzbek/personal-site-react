@@ -37,7 +37,7 @@ export default function AboutMe() {
         }}
       >
         {/* Title */}
-        <SectionTitle title={"About Me"} />
+        <SectionTitle title={"About Me"} counter={1} />
 
         {/* Content */}
         <Box

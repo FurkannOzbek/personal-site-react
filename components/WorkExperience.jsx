@@ -22,7 +22,7 @@ export default function WorkExperience() {
         }}
       >
         {/* Title */}
-        <SectionTitle title={"Work Experience"} />
+        <SectionTitle title={"Work Experience"} counter={2} />
       </Box>
     </FadeInSection>
   );

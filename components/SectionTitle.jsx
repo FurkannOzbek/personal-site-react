@@ -1,5 +1,5 @@
 import { Typography } from "@mui/material";
-export default function SectionTitle({ title }) {
+export default function SectionTitle({ title, counter }) {
   return (
     <Typography
       variant="h4"
@@ -14,12 +14,12 @@ export default function SectionTitle({ title }) {
           display: "flex",
           fontFamily: '"SF Mono", "Fira Code", "Fira Mono", "Roboto Mono", monospace',
           counterIncrement: "section",
-          content: '"0"counter(section)"."',
+          content: `"0${counter}."`,
           padding: "10px 10px 0 0 ",
           color: "#64ffda",
           fontWeight: "400",
           fontSize: "clamp(16px,3vw,20px)",
-          mb: "5px",
+          mb: "0px",
         },
         "&::after": {
           display: "flex",
