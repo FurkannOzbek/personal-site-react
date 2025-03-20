@@ -10,8 +10,8 @@ export default function WorkExperience() {
         component="section"
         sx={{
           display: "flex",
-          ml: { lg: "25%", md: "15%", sm: "5%", xs: "1%" },
-          mr: { lg: "25%", md: "15%", sm: "5%", xs: "1%" },
+          ml: { lg: "30%", md: "15%", sm: "5%", xs: "1%" },
+          mr: { lg: "20%", md: "15%", sm: "5%", xs: "1%" },
           flexDirection: "column",
           alignItems: "flex-start",
           justifyContent: "center",
@@ -22,7 +22,7 @@ export default function WorkExperience() {
         }}
       >
         {/* Title */}
-        <SectionTitle title={"About Me"} />
+        <SectionTitle title={"Work Experience"} />
       </Box>
     </FadeInSection>
   );

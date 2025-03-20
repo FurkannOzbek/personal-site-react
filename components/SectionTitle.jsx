@@ -19,6 +19,7 @@ export default function SectionTitle({ title }) {
           color: "#64ffda",
           fontWeight: "400",
           fontSize: "clamp(16px,3vw,20px)",
+          mb: "5px",
         },
         "&::after": {
           display: "flex",
