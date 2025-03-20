@@ -1,7 +1,8 @@
 "use client";
 import FadeInSection from "./FadeInSection";
 import SectionTitle from "./SectionTitle";
-import { Box } from "@mui/material";
+import { Box, Typography, Button } from "@mui/material";
+import ExperienceButtons from "./ExperienceButtons";
 
 export default function WorkExperience() {
   return (
@@ -23,6 +24,35 @@ export default function WorkExperience() {
       >
         {/* Title */}
         <SectionTitle title={"Work Experience"} counter={2} />
+        <Box
+          sx={{
+            display: "flex",
+            flexDirection: "row",
+            gap: "20px",
+            width: "100%",
+            maxWidth: "1200px",
+          }}
+        >
+          <Box
+            sx={{
+              flex: 1,
+              display: "flex",
+              flexDirection: "column",
+            }}
+          >
+            <ExperienceButtons title={"EG Digital Wellfare"} />
+            <ExperienceButtons title={"KFC"} />
+            <ExperienceButtons title={"Alya Boutique Hotel"} />
+            <ExperienceButtons title={"C2Tech"} />
+          </Box>
+          <Box
+            sx={{
+              flex: 3,
+            }}
+          >
+            Content
+          </Box>
+        </Box>
       </Box>
     </FadeInSection>
   );
